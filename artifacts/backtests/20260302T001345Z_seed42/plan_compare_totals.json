@@ -1,0 +1,37 @@
+{
+  "objective": {
+    "lambda": 0.8,
+    "type": "risk_adjusted"
+  },
+  "window": {
+    "start": "2026-01-01",
+    "end": "2026-03-31",
+    "n_days": 90
+  },
+  "solver": {
+    "success": true,
+    "message": "Optimization terminated successfully"
+  },
+  "actual": {
+    "spend": 1159375008.1815314,
+    "leads": 180168.0,
+    "attempts": 139609.0,
+    "connected": 47120.0,
+    "contracts": 10363.0,
+    "premium": 10626372205.03697
+  },
+  "pred_on_actual_plan": {
+    "leads": 182111.58913767658,
+    "attempts": 137518.1527985656,
+    "connected": 45236.32918000741,
+    "contracts": 9976.962967531363,
+    "premium": 9840324745.045204
+  },
+  "pred_on_opt_plan": {
+    "leads": 177328.0051045443,
+    "attempts": 134029.12776203337,
+    "connected": 44147.267385424355,
+    "contracts": 9757.909819231858,
+    "premium": 9569648036.312794
+  }
+}

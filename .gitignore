@@ -1,5 +1,5 @@
 __pycache__/
 *.pyc
-artifacts/
+#artifacts/
 logs/
 data/curated/mart/*.csv

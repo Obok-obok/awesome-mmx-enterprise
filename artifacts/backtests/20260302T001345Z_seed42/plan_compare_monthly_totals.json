@@ -1,0 +1,116 @@
+{
+  "objective": {
+    "lambda": 0.8,
+    "type": "risk_adjusted"
+  },
+  "periods": {
+    "2026-01": {
+      "window": {
+        "start": "2026-01-01",
+        "end": "2026-01-31",
+        "n_days": 31
+      },
+      "solver": {
+        "success": true,
+        "message": "Optimization terminated successfully"
+      },
+      "budget": {
+        "total": 382016238.00078726
+      },
+      "actual": {
+        "spend": 382016238.00078726,
+        "leads": 57812.0,
+        "attempts": 44882.0,
+        "connected": 15223.0,
+        "contracts": 3411.0,
+        "premium": 3498555172.475711
+      },
+      "pred_on_actual_plan": {
+        "leads": 62578.47995351139,
+        "attempts": 47259.084939633365,
+        "connected": 15549.865073874127,
+        "contracts": 3429.954252554682,
+        "premium": 3381989441.3788395
+      },
+      "pred_on_opt_plan": {
+        "leads": 62401.6193087223,
+        "attempts": 47087.546356345636,
+        "connected": 15461.115180973877,
+        "contracts": 3404.904729239477,
+        "premium": 3343435679.358413
+      }
+    },
+    "2026-02": {
+      "window": {
+        "start": "2026-02-01",
+        "end": "2026-02-28",
+        "n_days": 28
+      },
+      "solver": {
+        "success": false,
+        "message": "Singular matrix C in LSQ subproblem"
+      },
+      "budget": {
+        "total": 363213125.6089292
+      },
+      "actual": {
+        "spend": 363213125.6089292,
+        "leads": 55796.0,
+        "attempts": 43173.0,
+        "connected": 14449.0,
+        "contracts": 3089.0,
+        "premium": 3178888847.1346817
+      },
+      "pred_on_actual_plan": {
+        "leads": 55764.1583706479,
+        "attempts": 40626.08650313465,
+        "connected": 13358.778547184602,
+        "contracts": 2834.7828212779864,
+        "premium": 2779908511.2301025
+      },
+      "pred_on_opt_plan": {
+        "leads": 55547.63231049431,
+        "attempts": 40425.212378588745,
+        "connected": 13261.696100512405,
+        "contracts": 2807.687019811899,
+        "premium": 2784540863.042844
+      }
+    },
+    "2026-03": {
+      "window": {
+        "start": "2026-03-01",
+        "end": "2026-03-31",
+        "n_days": 31
+      },
+      "solver": {
+        "success": false,
+        "message": "Singular matrix C in LSQ subproblem"
+      },
+      "budget": {
+        "total": 414145644.57181466
+      },
+      "actual": {
+        "spend": 414145644.57181466,
+        "leads": 66560.0,
+        "attempts": 51554.0,
+        "connected": 17448.0,
+        "contracts": 3863.0,
+        "premium": 3948928185.4265785
+      },
+      "pred_on_actual_plan": {
+        "leads": 61963.97900928285,
+        "attempts": 45307.81954604581,
+        "connected": 14901.114276276554,
+        "contracts": 3175.1510223836663,
+        "premium": 3117878246.859961
+      },
+      "pred_on_opt_plan": {
+        "leads": 61724.178442938864,
+        "attempts": 45083.37311925063,
+        "connected": 14791.62209177192,
+        "contracts": 3144.527805059649,
+        "premium": 3087174286.9740734
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mart_file": {
+    "path": "/home/home/workspace/awesome_mmx/data/curated/mart/daily_channel_fact.csv",
+    "sha256": "a8f9917105b6f893b2e16852b73abe8b938415977ee97fdc6a171278540dbf9d",
+    "rows": 1092,
+    "min_date": "2025-10-01",
+    "max_date": "2026-03-31"
+  },
+  "model_version": "v20260302_001357"
+}
