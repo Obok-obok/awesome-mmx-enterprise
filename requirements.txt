@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 streamlit
 pandas
 numpy
 matplotlib
 pytest
-=======
+
+
 fastapi>=0.110
 uvicorn[standard]>=0.27
 streamlit>=1.32
@@ -23,4 +23,4 @@ pytensor>=2.18
 numba<0.60
 coverage<7
 matplotlib>=3.7
->>>>>>> eebb871 (version up)
+
