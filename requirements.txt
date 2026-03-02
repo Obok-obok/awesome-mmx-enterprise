@@ -1,25 +1,48 @@
-streamlit
-pandas
-numpy
-matplotlib
-pytest
+#streamlit
+#pandas
+#numpy
+#matplotlib
+#pytest
 
-fastapi>=0.110
-uvicorn[standard]>=0.27
+#fastapi>=0.110
+#uvicorn[standard]>=0.27
+#streamlit>=1.32
+#pandas>=2.0
+#numpy>=1.24
+#scipy>=1.10
+#pydantic>=2.0
+#python-dateutil>=2.8
+#reportlab>=4.0
+#pyyaml>=6.0
+#pymc>=5.10
+#arviz>=0.17
+#pytensor>=2.18
+
+# PyMC stack sometimes pulls numba; ensure compatibility on Debian images
+#numba<0.60
+#coverage<7
+#matplotlib>=3.7
+
 streamlit>=1.32
 pandas>=2.0
 numpy>=1.24
+matplotlib>=3.7
+
+fastapi>=0.110
+uvicorn[standard]>=0.27
+
 scipy>=1.10
 pydantic>=2.0
 python-dateutil>=2.8
 reportlab>=4.0
 pyyaml>=6.0
+
 pymc>=5.10
 arviz>=0.17
 pytensor>=2.18
 
-# PyMC stack sometimes pulls numba; ensure compatibility on Debian images
-numba<0.60
-coverage<7
-matplotlib>=3.7
+# Keep numba in a modern range compatible with Python 3.11
+numba>=0.57,<0.60
 
+pytest
+coverage<7
