@@ -1,5 +1,5 @@
 
-# MMX Enterprise – Marketing Media Mix AI Agent
+# MMX Enterprise – Marketing Media Mix
 
 **문서 생성일:** 2026-03-02
 
