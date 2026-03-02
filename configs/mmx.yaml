@@ -1,0 +1,124 @@
+project:
+  name: "MMX Bayesian Funnel SCM"
+data:
+  input_channel_path: "data/input_daily_channel.csv"
+  input_campaign_path: "data/input_daily_campaign.csv"
+  out_dir: "out"
+model:
+  # inference: mcmc (NUTS) | advi (very fast approximate)
+  inference: "mcmc"
+  draws: 150
+  tune: 150
+  chains: 1
+  target_accept: 0.85
+  advi_steps: 2000
+  advi_draws: 300
+  seed: 42
+  adstock_alpha: 0.5
+  saturation_k: 0.00008
+ops:
+  tm_capacity_per_day: 1200
+  sla_softcap_connected: 0.85
+budget:
+  total_budget: 120000000
+  channel_bounds:
+    google: [0.10, 0.35]
+    naver:  [0.10, 0.35]
+    meta:   [0.05, 0.30]
+    toss:   [0.05, 0.25]
+    kakao:  [0.05, 0.25]
+  step: 0.02
+
+# Adaptive / Dynamic mode (optional)
+dynamic:
+  # DLM observation variance on log1p(leads)
+  obs_var_leads: 0.20
+  # Random-walk drift variance for time-varying channel media effects
+  q_drift: 0.01
+  # Bounds (shares) applied in Thompson-style next-day allocation
+  budget_min_share: 0.05
+  budget_max_share: 0.80
+  # If not provided, next-day attempts defaults to capacity * softcap
+  # tm_attempts_next_day: 1020
+
+# Ops Loop (production-like daily loop)
+ops_loop:
+  max_history_days: 120
+  geo_cache_pairs: true
+  # exploration budget fraction (0~0.5)
+  exploration_eps: 0.10
+  # >1.0 = softer (less extreme), <1.0 = more aggressive
+  temperature: 1.0
+  # posterior predictive draws used inside the daily optimizer
+  ppc_draws: 300
+  # CVaR alpha (we use 10% tail mean as a risk-aware score)
+  risk_alpha: 0.10
+
+  # CVaR hard constraint (downside loss limit)
+  # If set, the recommender samples multiple candidate allocations and rejects
+  # those whose predicted next-day CVaR10 falls below the floor.
+  # - cvar_floor_ratio uses the equal-split baseline CVaR10 as reference.
+  # - cvar_floor_abs enforces an absolute CVaR10 minimum.
+  cvar_floor_ratio: 0.95
+  cvar_floor_abs: 0.0
+  reco_candidates: 80
+
+  # drift detection on leads residual (log1p scale)
+  drift_window: 21
+  drift_z: 3.0
+  drift_persist_days: 3
+
+# A/B Holdout (optional)
+ab_holdout:
+  enabled: false
+  # channels to run weekly CONTROL/TREATMENT multiplier tests (on top of reco)
+  holdout_channels: [google]
+  # treatment: +delta, control: -delta
+  delta: 0.20
+
+# Geo Holdout / Matched Market (optional)
+geo_holdout:
+  enabled: false
+  input_geo_channel_path: data/input_daily_geo_channel.csv
+  # apply geo holdout only for these channels
+  holdout_channels: [google]
+  delta: 0.15
+  min_geo_share: 0.02
+  max_geo_share: 0.80
+
+  # Weekly-stable assignment (no longer pair-only)
+  treated_frac: 0.40
+  min_control_geos: 5
+
+  # Matching window for synthetic control (memory guard included in code)
+  prewindow_days: 56
+
+  # Ridge-weighted synthetic control
+  mm_ridge_lambda: 1.0
+  mm_max_geos: 20
+
+  # Pre-period fit quality filters (keep only high-quality treated geos)
+  mm_prefit_min_r2: 0.50
+  mm_prefit_max_rmse: 1.0e18
+  mm_prefit_max_mape: 1.0e18   # 0.20 = 20%
+
+  # Weekly estimator windows
+  mm_pre_days: 28
+  mm_post_days: 7
+
+  # Metrics to report
+  mm_value_cols: [premium, contracts, ltv]
+
+  # LTV model (retention-based)
+  ltv_retention_path: data/input_channel_retention.csv
+  ltv_horizon_months: 36
+  ltv_monthly_retention_default: 0.92
+  ltv_monthly_discount_default: 0.01
+
+# Weekly reporting (PDF + optional email)
+reporting:
+  weekly_days: 7
+  email:
+    enabled: false
+    subject: "MMX Ops Weekly Report"
+    body: "Attached is the weekly Ops Monitoring report."

@@ -1,0 +1,19 @@
+{
+  "headline": "채널 OFF 시나리오에서 보험료 손실이 가장 큰 채널은 google임(최근 30일 평균 기준)",
+  "key_messages": [
+    "BASE 기준 최근 30일 일평균 DB 59건, 계약 3건, 보험료 3,096원 추정임",
+    "google OFF 시 일평균 DB -15건, 계약 -1건, 보험료 -1,288원 변화(감소) 추정임",
+    "TM 용량 사용률 95% 분위수 0.50로 포화 구간 진입 리스크 존재함(softcap 이후 연결률 하락 반영)"
+  ],
+  "actions": [
+    "예산 증액은 TM 용량/슬롯과 함께 설계 필요함(용량 85% 초과 구간에서 연결률 하락).",
+    "Search 계열(google/naver)과 Assist 성격 채널(meta/kakao)의 역할 분리를 위한 메시지/캠페인 레벨 수집 권장.",
+    "DB 질(예: 관심상품/연령대/지역) 변수를 리드 테이블에 추가하면 계약 예측/최적화 정확도가 상승."
+  ],
+  "evidence": {
+    "posterior_channel": "out/posterior_summary_channel.csv",
+    "posterior_campaign": "out/posterior_summary_campaign.csv",
+    "counterfactual_channel": "out/counterfactuals_channel.csv",
+    "budget": "out/budget_recommendation.csv"
+  }
+}

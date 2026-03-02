@@ -1,0 +1,42 @@
+{
+  "period": {
+    "start": "2026-01-08",
+    "end": "2026-01-14",
+    "compare_mode": "MoM",
+    "compare_label": "전월대비",
+    "prev_start": "2025-12-08",
+    "prev_end": "2025-12-14"
+  },
+  "cards": [
+    {
+      "title": "Lead Efficiency",
+      "value": "100.0 / 1M",
+      "comp": "전월대비 +0.0%",
+      "subtitle": "Leads 8,400 / Spend 84,000,000"
+    },
+    {
+      "title": "Attempt Rate",
+      "value": "80.0%",
+      "comp": "전월대비 +0.0%",
+      "subtitle": "Attempts 6,720 / Leads 8,400"
+    },
+    {
+      "title": "Connect Rate",
+      "value": "31.2%",
+      "comp": "전월대비 +4.2%",
+      "subtitle": "Connected 2,100 / Attempts 6,720"
+    },
+    {
+      "title": "Contract Rate (CRR)",
+      "value": "25.0%",
+      "comp": "전월대비 +0.0%",
+      "subtitle": "Contracts 525 / Connected 2,100"
+    },
+    {
+      "title": "Premium / Contract",
+      "value": "1,100,000",
+      "comp": "전월대비 +10.0%",
+      "subtitle": "Premium 577,500,000 / Contracts 525"
+    }
+  ]
+}

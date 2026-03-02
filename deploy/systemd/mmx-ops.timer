@@ -1,0 +1,9 @@
+[Unit]
+Description=Run MMX Ops Daily at 09:05
+
+[Timer]
+OnCalendar=*-*-* 09:05:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,91 @@
+:root{
+  --bg:#F8FAFC;
+  --card:#FFFFFF;
+  --border:#E5E7EB;
+  --muted:#6B7280;
+  --text:#111827;
+  --radius:14px;
+
+  /* spacing scale */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+
+  /* type scale */
+  --h1: 28px;
+  --h2: 18px;
+  --h3: 15px;
+  --body: 13px;
+  --caption: 12px;
+}
+
+html, body, [class*="css"] {
+  font-family: Inter, "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+}
+
+.stApp { background: var(--bg); }
+
+/* tighten container */
+.block-container { padding-top: 1.0rem; padding-bottom: 2.0rem; max-width: 1250px; }
+
+/* headings */
+h1 { font-size: var(--h1); letter-spacing: -0.3px; }
+h2 { font-size: var(--h2); letter-spacing: -0.2px; margin-top: 0.6rem; }
+h3 { font-size: var(--h3); letter-spacing: -0.1px; }
+p, li, div { font-size: var(--body); }
+
+.small-muted { color: var(--muted); font-size: 12px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s4);
+}
+
+.kpi-grid { display:flex; gap: 12px; }
+
+.kpi-label { color: var(--muted); font-size: 12px; margin-bottom: 4px; }
+.kpi-value { font-size: 22px; font-weight: 650; line-height: 1.1; }
+.kpi-sub { color: var(--muted); font-size: 12px; margin-top: 6px; }
+
+.badge {
+  display:inline-block; padding: 2px 8px; border-radius: 999px;
+  background: #EEF2FF; border: 1px solid #E0E7FF;
+  font-size: 12px; color:#3730A3;
+}
+
+.badge-ok { background:#ECFDF5; border-color:#D1FAE5; color:#065F46; }
+.badge-warn { background:#FFFBEB; border-color:#FEF3C7; color:#92400E; }
+.badge-danger { background:#FEF2F2; border-color:#FEE2E2; color:#991B1B; }
+
+/* Streamlit widgets standardization */
+section[data-testid="stSidebar"] {
+  background: #FFFFFF;
+  border-right: 1px solid var(--border);
+}
+
+div[data-testid="stMetric"] {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s4);
+}
+
+div[data-testid="stMetric"] label {
+  color: var(--muted);
+}
+
+div[data-testid="stDataFrame"] {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+button[kind="primary"] { border-radius: 10px; }
+
+hr { border: none; border-top: 1px solid var(--border); margin: 0.6rem 0; }

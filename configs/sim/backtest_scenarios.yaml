@@ -1,0 +1,12 @@
+scenario:
+  total_budget:
+    base_daily: 12000000.0
+    seasonality:
+      yearly_amp: 0.12
+      weekly_amp: 0.08
+  allocation_rule:
+    type: proportional_to_trailing_leads
+    trailing_days: 7
+    smoothing_gamma: 0.35
+    min_share: 0.06
+    max_share: 0.30

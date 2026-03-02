@@ -1,0 +1,238 @@
+{
+  "summary": {
+    "PASS": 44,
+    "WARN": 0,
+    "FAIL": 0
+  },
+  "results": [
+    {
+      "level": "PASS",
+      "check": "required_columns.channel",
+      "detail": "ok"
+    },
+    {
+      "level": "PASS",
+      "check": "required_columns.campaign",
+      "detail": "ok"
+    },
+    {
+      "level": "PASS",
+      "check": "date_parse.channel",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "date_parse.campaign",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.channel.spend",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.channel.leads",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.channel.tm_attempts",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.channel.tm_connected",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.channel.contracts",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.channel.premium",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.campaign.spend",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.campaign.leads",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.campaign.tm_attempts",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.campaign.tm_connected",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.campaign.contracts",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "missingness.campaign.premium",
+      "detail": "missing_pct=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.channel.spend",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.channel.leads",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.channel.tm_attempts",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.channel.tm_connected",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.channel.contracts",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.channel.premium",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.campaign.spend",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.campaign.leads",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.campaign.tm_attempts",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.campaign.tm_connected",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.campaign.contracts",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "non_negative.campaign.premium",
+      "detail": "neg_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "funnel.tm_connected_le_attempts.channel",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "funnel.contracts_le_connected.channel",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "premium.zero_contracts.channel",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "premium.missing_when_contracts.channel",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "funnel.tm_connected_le_attempts.campaign",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "funnel.contracts_le_connected.campaign",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "premium.zero_contracts.campaign",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "premium.missing_when_contracts.campaign",
+      "detail": "bad_rows=0"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.channel.spend",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.channel.leads",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.channel.contracts",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.channel.premium",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.campaign.spend",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.campaign.leads",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.campaign.contracts",
+      "detail": "outlier_rate=0.000"
+    },
+    {
+      "level": "PASS",
+      "check": "outliers.campaign.premium",
+      "detail": "outlier_rate=0.000"
+    }
+  ],
+  "policy": {
+    "missing_warn_threshold": 0.01,
+    "outlier_rule": "x > p99*5",
+    "funnel_constraints": [
+      "tm_connected <= tm_attempts",
+      "contracts <= tm_connected",
+      "premium should be 0 when contracts=0 (warn)"
+    ]
+  }
+}

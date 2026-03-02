@@ -1,0 +1,9 @@
+[Unit]
+Description=MMX Ops Daily (Dynamic Bayesian SCM)
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/workspace/mmx_bayes_campaign_adaptive_dynamic
+ExecStart=%h/workspace/mmx_bayes_campaign_adaptive_dynamic/.venv/bin/python -m src.pipeline.run_ops_daily
+Environment=PYTHONUNBUFFERED=1

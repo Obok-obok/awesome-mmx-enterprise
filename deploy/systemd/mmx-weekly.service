@@ -1,0 +1,8 @@
+[Unit]
+Description=MMX Ops Weekly Report (A/B + PDF + Email)
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/workspace/mmx_bayes_campaign_adaptive_dynamic
+ExecStart=/usr/bin/env bash scripts/run_weekly_report.sh
+

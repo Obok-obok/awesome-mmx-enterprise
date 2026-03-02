@@ -1,0 +1,18 @@
+metric,artifact,source_file,source_columns,logic_function
+DB(Leads),leads,data/input_daily_channel.csv,leads,src/features/panel.build_panel_daily
+TM Attempts,tm_attempts,data/input_daily_channel.csv,tm_attempts,src/features/panel.build_panel_daily
+TM Connected,tm_connected,data/input_daily_channel.csv,tm_connected,src/features/panel.build_panel_daily
+Contracts,contracts,data/input_daily_channel.csv,contracts,src/features/panel.build_panel_daily
+Premium,premium,data/input_daily_channel.csv,premium,src/features/panel.build_panel_daily
+Leads/Spend,leads_per_spend,data/input_daily_channel.csv,"leads,spend",src/features/panel.build_panel_daily
+Attempts/Leads,attempts_per_lead,data/input_daily_channel.csv,"tm_attempts,leads",src/features/panel.build_panel_daily
+Connected/Attempts,connected_per_attempt,data/input_daily_channel.csv,"tm_connected,tm_attempts",src/features/panel.build_panel_daily
+Contracts/Connected,contracts_per_connected,data/input_daily_channel.csv,"contracts,tm_connected",src/features/panel.build_panel_daily
+Premium/Contract,premium_per_contract,data/input_daily_channel.csv,"premium,contracts",src/features/panel.build_panel_daily
+ROI(Premium/Spend),roi,data/input_daily_channel.csv,"premium,spend",src/features/panel.build_panel_daily
+ROI implied(5-Factor product),roi_implied,data/input_daily_channel.csv,"leads_per_spend,attempts_per_lead,connected_per_attempt,contracts_per_connected,premium_per_contract",src/features/panel.build_panel_daily
+Campaign Contracts,campaign_counterfactuals,data/input_daily_campaign.csv,"contracts,premium",src/mmx/bayesian_scm.fit_bayesian_funnel_scm_campaign
+캠페인→증권 매핑 규칙,mapping_rules,raw_leads/raw_tm_calls/raw_policies,"customer_id, timestamps","src/data/raw_to_inputs.map_policy_to_lead (30-day window, dedupe leads, multi-policy)"
+Channel OFF 시나리오,counterfactuals,posterior,posterior samples,src/mmx/bayesian_scm.simulate_counterfactuals
+Budget Recommendation,budget_recommendation,configs/mmx.yaml,bounds & total_budget,src/mmx/optimizer.recommend_budget_from_roi
+Data Quality Gate,data_quality_report,inputs,required columns / negatives / outliers / funnel constraints,src/data_quality/gates.run_data_quality

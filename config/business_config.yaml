@@ -1,0 +1,4 @@
+# Business configuration (Executive/Optimizer)
+monthly_target_premium_default: 23000000
+calendar: calendar_month   # fixed: 1st to month-end
+currency: KRW
