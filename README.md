@@ -222,7 +222,7 @@ streamlit run apps/dashboard/app.py
 ```
 
 👉 **Streamlit Dashboard**  
-https://awesome-mmx-enterprise-h3jtypynvxqetd7vlgms7g.streamlit.app/
+https://awesome-mmx-enterprise-btj4wvctxwkbjqjrmsposn.streamlit.app/
 
 ---
 
