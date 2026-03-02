@@ -212,8 +212,7 @@ python scripts/run_backtest.py   --mode demo   --seed 42   --start 2025-01-01 --
 streamlit run apps/dashboard/app.py
 ```
 
-URL : https://awesome-fds-9qyj9byrubzicscijfsgnh.streamlit.app/ 
-
+URL : https://awesome-mmx-enterprise-h3jtypynvxqetd7vlgms7g.streamlit.app/
 ---
 
 # 9. 시스템 특징 요약
