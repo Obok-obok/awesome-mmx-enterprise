@@ -1,5 +1,6 @@
-# MMX Enterprise (v5.4.3) - runtime requirements
-# NOTE: Keep versions loose for easier installation on Debian/GCP images.
+# MMX Enterprise - runtime requirements
+# Streamlit Cloud currently uses Python 3.13 by default unless runtime.txt is provided.
+# We intentionally avoid numba/llvmlite because they do not support Python 3.13 on manylinux yet.
 
 fastapi>=0.110
 uvicorn[standard]>=0.27
@@ -8,7 +9,7 @@ uvicorn[standard]>=0.27
 streamlit>=1.32
 matplotlib>=3.7
 
-# Data
+# Data / Math
 pandas>=2.0
 numpy>=1.24
 scipy>=1.10
@@ -22,6 +23,3 @@ arviz>=0.17
 
 # Reports (PDF)
 reportlab>=4.0
-
-# PyMC stack sometimes pulls numba; ensure compatibility on Debian images
-numba<0.60

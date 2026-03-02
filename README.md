@@ -172,31 +172,40 @@ Posterior 평균 또는 모멘트 근사 기반으로 계산됩니다.
 
 # 7. 폴더 구조 (Repository Overview)
 
+```text
 awesome_mmx/
 │
 ├── apps/
-│   └── dashboard/          # Streamlit UI
+│   └── dashboard/              # Streamlit UI
+│       └── app.py              # Dashboard entrypoint
 │
 ├── configs/
-│   └── sim/                # 시뮬레이션 설정
+│   └── sim/                    # 시뮬레이션/백테스트 설정 파일
 │
 ├── scripts/
-│   └── run_backtest.py     # 실행 엔트리포인트
+│   └── run_backtest.py         # CLI 실행 엔트리포인트
 │
-├── src/mmx/
-│   ├── engine/
-│   │   ├── sem/            # 구조방정식 모델
-│   │   ├── optimizer/      # 최적화 로직
-│   │   └── simulation/     # 데이터 생성기
-│   │
-│   ├── usecases/
-│   │   └── run_backtest.py
-│   │
-│   └── domain/
+├── src/
+│   └── mmx/
+│       ├── engine/
+│       │   ├── sem/            # Bayesian Structural Equation Model
+│       │   ├── optimizer/      # 예산 최적화 로직
+│       │   └── simulation/     # 데이터 생성기 / 시뮬레이션
+│       │
+│       ├── usecases/
+│       │   └── run_backtest.py # 백테스트 오케스트레이션
+│       │
+│       └── domain/             # 도메인 모델 / 타입 정의
 │
-└── artifacts/              # 실행 결과 저장
+├── artifacts/                  # 실행 결과 저장 경로
+│
+├── requirements.txt
+├── runtime.txt
+└── README.md
+```
 
 ---
+
 
 # 8. 실행 방법
 
@@ -212,7 +221,9 @@ python scripts/run_backtest.py   --mode demo   --seed 42   --start 2025-01-01 --
 streamlit run apps/dashboard/app.py
 ```
 
-URL : https://awesome-mmx-enterprise-h3jtypynvxqetd7vlgms7g.streamlit.app/
+👉 **Streamlit Dashboard**  
+https://awesome-mmx-enterprise-h3jtypynvxqetd7vlgms7g.streamlit.app/
+
 ---
 
 # 9. 시스템 특징 요약
