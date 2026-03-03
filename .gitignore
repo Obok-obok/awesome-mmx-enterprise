@@ -2,4 +2,4 @@ __pycache__/
 *.pyc
 #artifacts/
 logs/
-data/curated/mart/*.csv
+#data/curated/mart/*.csv
